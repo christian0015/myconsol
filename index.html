@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyConsol</title>
+    <meta name="myconsol" content="apprendre, learn , programme, programming; code, codage, coding, c, html, css, , javascript, php, python, c, c++,services, contact, entreprise">
+    <link rel="stylesheet" href="myconsol_index.css">
+    <link rel="icon" href="https://lolcodeclan.netlify.app/image/CODE%20LOGO-W.png" type="image/x-icon">
+    <script>
+        //Selection du language
+        function explane() {
+            var proposition = document.getElementById("proposition");
+            var choix = proposition.value;
+            var detail = document.getElementById("affiche");
+
+            if (choix === "C") {
+                detail.textContent = "Avec C apprener les bases de toute programmation, affichage, saissie, pointeur, calcule et stockage de données.";
+            } else if (choix === "HTML_CSS") {
+                detail.textContent = "Html vous permettra de creer vos sites webs et de les personnalisés avec differents designs CSS.";
+            } else if (choix === "Js_PHP") {
+                detail.textContent = "JavaScript vous donne d'animer son page webs, realiser des calcules. Et grace à ses puissantes bibliotheques de realiser multi-tache comme le e-commerce. PHP rend votre site dynamique et fonctionnel, vous permettant d'etablir,une communication direct entre l'utilisateur et le site.";
+            } else if (choix === "Py") {
+                detail.textContent = "Creer des scripts d'automatisations, des calculs, d'assistance intelligentes et des jeux 2D et 3D grace à ses biblotheques.";
+            } else if (choix === "C++") {
+                detail.textContent = "A savoir : C++ est un langage de programmation polyvalent, basé sur le langage C. La programmation orientée objet et générique. C++ offre des fonctionnalités supplémentaires par rapport à C. C++ est utilisé dans divers domaines, notamment le développement de logiciels système, les jeux vidéo, les applications de bureau, les systèmes embarqués et les hautes performances. Il est apprécié pour son efficacité, sa puissance et sa flexibilité. De nombreux frameworks et bibliothèques, tels que Qt et Boost, sont développés en C++.";
+            } else {
+                detail.textContent = "Ces langages de programmation sont tous importants et ont leurs propres utilisations spécifiques. Le choix d'un langage dépend du type de projet et des besoins spécifiques du développeur.";
+            }
+        }
+        //Selection du theme
+        function changeColors() {
+            var select = document.getElementById("colorSelect");
+            var color = select.value;
+
+            var backgroundColor = "white";
+            var textColor = "";
+            var haColor = "";
+            var hbColor = "";
+            var hcColor = "";
+
+            if (color === "gray") {
+                backgroundColor = "gray";
+                textColor = "black";
+                haColor = "green";
+                hbColor = "maroon";
+                hcColor = "red";
+            }
+            else if (color === "red") {
+                backgroundColor = "lightpink";
+                textColor = "darkred";
+                haColor = "darkgreen";
+                hbColor = "brown";
+                hcColor = "darkred";
+            } else if (color === "green") {
+                backgroundColor = "lightgreen";
+                textColor = "darkgreen";
+                haColor = "green";
+                hbColor = "darkgreen";
+                hcColor = "darkred";
+            } else if (color === "blue") {
+                backgroundColor = "lightblue";
+                textColor = "darkblue";
+                haColor = "green";
+                hbColor = "darkorange";
+                hcColor = "blue";
+            }
+
+            document.body.style.backgroundColor = backgroundColor;
+            document.body.style.color = textColor;
+
+            var ha = document.getElementById("ha");
+            ha.style.color = haColor;
+
+            var hb = document.getElementById("hb");
+            hb.style.color = hbColor;
+
+            var hc = document.getElementById("hc");
+            hc.style.color = hcColor;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="https://coursereport-s3-production.global.ssl.fastly.net/rich/rich_files/rich_files/5961/s300/code-logo-square.png"
+                class="Logo" alt="">
+            <button id="menu-button">&boxbox;</button>
+            <menu id="menu">
+                <a href="index.html" class="item">Home&boxbox;</a>
+                <a href="MyConsol connexion.html" class="item">Account&boxbox;</a>
+                <a href="MyConsol office.html" class="item">Novelties&boxbox;</a>
+                <a href="MyConsol learn.html" class="item">Learn&Xopf;</a>
+                <a href="MyConsol interchat.html" class="item">Chat&boxbox;</a>
+                <div id="theme-color">
+                    <select id="colorSelect" onchange="changeColors()" style="position: relative;; left:0%;">
+                        <option selected hidden>Theme</option>
+                        <option value="Blanc">Blanc</option>
+                        <option value="gray">Gris</option>
+                        <option value="red">Rouge</option>
+                        <option value="green">Vert</option>
+                        <option value="blue">Bleu</option>
+                    </select>
+                    <br>
+                    <br>
+
+                </div>
+            </menu>
+        </nav>
+    </header>
+
+    <div id="font-deux">
+        <div id="text">
+            MyConsol vous accompagne pour vos bases codeur<br> <br>
+            <div class="texta">Developper des strategies codeur et savoir atteindre ses objectifsw</div>
+            <a href="https://www.youtube.com/@samirelachouri/featured"><button class="button-realisation">Autres leçons</button></a>
+        </div>
+        <div>
+            <img src="https://th.bing.com/th/id/R.691405c403c7c64a6a4d87153ae08501?rik=74bpdOAyTxDVrw&pid=ImgRaw&r=0" alt="" id="image">
+        </div>
+        
+    </div>
+    <div id="contenu">
+
+        <div id="font-trois">
+            <div class="realisation">Commencez en cliquant sur le bouton > > >
+                <a href="MyConsol connexion.html" class="">Account&boxbox;</a>
+                <br><br>
+            </div>
+        </div>
+        <div id="font-quatre">
+            <div class="visionnage">
+                <p>Quelques languages
+                </p>
+                <form action="" method="get">
+                    <select id="proposition" onchange="explane()">
+                        <option value="" style="color:rgb(20, 59, 95);" disabled selected hidden>centre d'interet</option>
+                        <option>centre interet</option>
+                        <option disabled>Basic Language</option>
+                        <option value="C">C</option>
+                        <option value="HTML_CSS">HTML &CSS</option>
+
+                        <option disabled>Intermediate</option>
+                        <option value="Js_PHP">JavaScript et Php</option>
+
+                        <option disabled>Automatisation & Application</option>
+                        <option value="Py">Python</option>
+                        <option value="C++">C++</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <div id="divAfiiche">
+            <div id="affiche"></div>
+        </div>
+
+        <br>
+
+        <div class="img">
+            <img src="https://durriesales.com/wp-content/uploads/2021/06/cost-independent-sales-rep-600x299.jpg" alt="" id="img-demo">
+            <img src="https://www.dessinemoiunsite.com/wp-content/uploads/2013/11/apprendre-html-css-pour-les-nuls.jpg" alt="" id="img-demo">
+            <img src="https://www.educba.com/academy/wp-content/uploads/2018/08/PHP-vs-JavaScript.png" alt="" id="img-demo">
+            <img src="https://i.ytimg.com/vi/aseydQlLelc/maxresdefault.jpg" id="img-demo">
+            <img src="https://cdn-europe1.lanmedia.fr/var/europe1/storage/images/europe1/technologies/playstation-vr-ce-que-lon-sait-deja-du-casque-de-realite-virtuelle-de-sony-2694586/26188621-1-fre-FR/PlayStation-VR-ce-que-l-on-sait-deja-du-casque-de-realite-virtuelle-de-Sony.jpg"
+                id="img-demo">
+            <img src="https://wallpaperaccess.com/full/9136.jpg" id="img-demo">
+            <img src="https://lwmag.co.za/wp-content/uploads/2020/06/DUALSENSE-2.jpg" id="img-demo">
+            <img src="https://images3.alphacoders.com/831/831673.jpg" id="img-demo">
+        </div>
+        <br><br>
+
+
+        <br>
+
+    </div>
+
+
+    <footer style="text-align:center;background-color:  rgb(99, 156, 153);">
+        <strong><br><br><br>&copy;copyrighst2023_myconsol</strong><br>Tous droits reservés.<br>
+
+        <a href="tel:+212634699940">Call</a> <a href="mailto:christiantukundastocklin@gmail.com">Mail</a><br><br>
+        <div>
+            <a href="facebook.com"><img src="logo-facebook.png" alt="" id="img-link"></a>-<a
+                href="youtube.com"><img src="https://www.sarei.de/images/social/youtube_bg_white.png" alt="" id="img-link"></a>-<a
+                href="instagam.com"><img src="https://th.bing.com/th/id/R.41e2672e66f7aba0f967aa362bf4701c?rik=wABWDxFjJS8ZNg&pid=ImgRaw&r=0"
+                    alt="" id="img-link"></a>
+            <a href=""><img src="https://bitemycoin.com/wp-content/uploads/2018/06/GitHub-Logo.png" alt="" id="img-link"></a>
+            <br>
+        </div>
+        <br><br><br> myconsol- -Tel_071308-8840<br>Casablanca, Maroc
+
+    </footer>
+    <script>
+        //---------------------------------------Button Menu----------------------------------
+        // Récupération des éléments HTML
+        const menuButton = document.getElementById('menu-button');
+        const menu = document.getElementById('menu');
+
+        // Fonction pour ouvrir le menu
+        function openMenu() {
+            menu.classList.add('open');
+            document.addEventListener('click', closeMenu);
+        }
+
+        // Fonction pour fermer le menu
+        function closeMenu(event) {
+            if (!menu.contains(event.target) && event.target !== menuButton) {
+                menu.classList.remove('open');
+                document.removeEventListener('click', closeMenu);
+            }
+        }
+
+        // Ajout d'un écouteur d'événement pour ouvrir le menu au clic
+        menuButton.addEventListener('click', openMenu);
+    </script>
+</body>
+
+</html>

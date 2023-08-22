@@ -1,0 +1,301 @@
+/*===================================================Reset CSS==========================================*/
+body {
+    font-size: 100%;
+    background-color: #ffff;
+    padding: 0;
+    margin: 0;
+  }
+
+  header {
+    width: 100%
+  }
+
+  nav {
+    background-color: #ffffff;
+    padding-bottom: 1px;
+    width: 100%;
+    align-items: flex-end;
+  }
+
+  .Logo{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 0 0 #ffffff;
+  }
+  menu {
+    float: right;
+    margin-top: 40px;
+    
+  }
+
+  .item {
+    color: rgb(4, 44, 46);
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    margin-right: 90px;
+    font-size: 130%;
+  }
+
+  #menu-button {
+    display: none;
+  }
+
+  #font-deux {
+    background-color: rgb(6, 26, 44);
+    color: #041625;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    border-top-left-radius: 150px ;
+    border-top-right-radius: 150px;
+    border-bottom-left-radius: 0px ;
+    border-bottom-right-radius: 0px;
+  }
+
+  #text {
+    font-size: 300%;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 100px;
+    max-width: 40%;
+  }
+  svg{
+    position: absolute;
+    margin-top: 365px;
+  }
+  .texta{
+      font-size: 50%;
+      color: rgb(166, 221, 226);
+      font-weight: normal;
+  }
+  #image{
+      height: 400px;
+      width: 550px;
+      box-shadow: 0 0 0 #ffffff;
+  }
+
+  /*=================================Contenu proprement dit====================================*/
+
+  #contenu {
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+
+  #font-trois {
+    padding: 60px;
+    text-align: start;
+  }
+
+  .realisation {
+    font-size: 200%;
+    color: #000000;
+    text-align: center;
+  }
+
+  .button-realisation {
+    background-color: rgb(68, 112, 21);
+    color: #ffffff;
+    padding: 20px;
+    font-size: 50%;
+    margin-top: 20px;
+    width: 240px;
+  }
+
+  #font-quatre {
+    padding: 20px;
+    background-color: rgb(130, 139, 125);
+  }
+
+  .visionnage {
+    font-size: 200%;
+    color: #ffffff;
+  }
+
+  select {
+    font-size: 100%;
+    background-color: rgb(101, 179, 121);
+    color: #ffffff;
+    border-radius: 30px;
+    text-align: center;
+  }
+
+  img {
+    width: 20%;
+    height: 10%;
+    box-shadow: 0 50px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+  }
+
+  .explanation {
+    display: none;
+  }
+
+  #C:target {
+    display: block;
+  }
+
+  #divffiche {
+    left: 20%;
+  }
+
+  #affiche {
+    font-size: 150%;
+    width: 60%;
+    padding-left: 10%;
+    padding: 30px;
+    box-shadow: 20px 20px 20px rgb(196, 196, 196);
+    text-align: start;
+  }
+
+  #img-link {
+    width: 50px;
+    height: 50px;
+    box-shadow: 4px 10px 20px#ffffff;
+    padding: -30%;
+    margin: -20px;
+    margin-right: 5%;
+    padding-bottom: -100%;
+    text-align: justify;
+  }
+
+  #theme-color{
+    position: fixed;
+    color: #1b1a17;
+    top: 10px;
+    padding: 20px;
+    right: 0;
+  }
+
+  /*Dimensoin/Format PC & Mobile*/
+  /* Styles pour les écrans de taille moyenne (tablettes) */
+
+  footer {
+    color: rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    align-content: center;
+    padding-bottom: 100px;
+    border-top-right-radius: 90px;
+    border-top-left-radius: 90px;
+  }
+
+  /* Styles pour les écrans de petite taille (mobiles) */
+  @media only screen and (max-width: 1024px) {
+    *{
+      font-size: 90%;
+    }
+    nav {
+      padding-bottom: 0;
+    }
+    .item{color: #ffffff;}
+    menu{
+      display: inline;
+    }
+    #menu-button {
+      display: block;
+      float: right;
+      margin-top: 30px;
+      margin-right: 50px;
+      font-size: 300%;
+    }
+    #menu {
+      display: none;
+    }
+    #menu.open {
+      display: inline;
+      font-size: 200%;
+      background-color: rgba(90, 90, 90, 0.877);
+      color: #ffffff;
+      padding: 20px;
+      line-height: 100px;
+      height: 700px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 250px;
+      position: fixed;
+      z-index: 1000;
+  }
+  select {
+    font-size: 100%;
+    background-color: rgb(101, 179, 121);
+    color: #ffffff;
+    border-radius: 30px;
+    text-align: center;
+  }
+    #font-deux {
+        background-color: rgb(6, 26, 44);
+        display: block;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        border-top-left-radius: 50px ;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 70px ;
+        border-bottom-right-radius: 0px;
+      }
+    #text {
+      font-size: 200%;
+        padding: 20px;
+        max-width: 100%;
+      }
+      .texta{
+          font-size: 100%;
+          color: rgb(166, 221, 226);
+          font-weight: normal;
+      }
+      #image{
+          height: 200px;
+          width: 300px;
+          box-shadow: 0 0 0 #ffffff;
+          right: 10px;
+          margin-bottom: 50px;
+      }
+      .button-realisation {
+        background-color: rgb(68, 112, 21);
+        color: #ffffff;
+        padding: 7px;
+        font-size: 100%;
+        margin-top: 20px;
+        width: 250px;
+      }
+    
+    #affiche {
+      font-size: 200%;
+      width: 60%;
+      padding-left: 10%;
+      padding: 30px;
+      box-shadow: 20px 20px 20px rgb(97, 97, 97);
+      text-align: start;
+    }
+
+    footer {
+      color: rgb(0, 0, 0);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      position: relative;
+      align-content: center;
+      border-top-right-radius: 90px;
+      border-top-left-radius: 90px;
+      padding-bottom: 30px;
+    }
+    img {
+        width: 40%;
+        height: 30%;
+        box-shadow: 0 50px 30px rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        margin-right: 10px;
+      }
+    #img-link {
+      font-size: 90%;
+      box-shadow: 10px 10px 10px#ffffff;
+      padding: -30%;
+      margin: -20px;
+      margin-right: 30px;
+      padding-bottom: -100%;
+    }
+  }

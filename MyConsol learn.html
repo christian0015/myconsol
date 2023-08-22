@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MyConsol</title>
+  <meta name="myconsol" content="apprendre, learn , programme, programming; code, codage, coding, c, html, css, , javascript, php, python, c, c++,services, contact, entreprise">
+  <link rel="stylesheet" href="reconversion.css">
+  <link rel="icon" href="https://lolcodeclan.netlify.app/image/CODE%20LOGO-W.png" type="image/x-icon">
+  <style>
+    /*===================================================Reset CSS==========================================*/
+    body {
+      font-size: 100%;
+      background-color: #ffff;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      width: 100%
+    }
+
+    nav {
+      background-color: #ffffff;
+      padding-bottom: 1px;
+      width: 100%;
+      align-items: flex-end;
+    }
+
+    .Logo {
+      margin-left: 20px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      width: 70px;
+      height: 70px;
+      box-shadow: 0 0 0 #ffffff;
+      border-radius: 20px;
+    }
+
+    menu {
+      float: right;
+      margin-top: 40px;
+
+    }
+
+    .item {
+      color: rgb(4, 44, 46);
+      text-decoration: none;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: bold;
+      margin-right: 90px;
+      font-size: 130%;
+    }
+
+    #menu-button {
+      display: none;
+    }
+
+    select {
+      font-size: 100%;
+      background-color: rgb(101, 179, 121);
+      color: #ffffff;
+      border-radius: 30px;
+      text-align: center;
+    }
+
+    aside {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+
+
+    #img-link {
+      width: 50px;
+      height: 50px;
+      box-shadow: 4px 10px 20px#ffffff;
+      padding: -30%;
+      margin: -20px;
+      margin-right: 5%;
+      padding-bottom: -100%;
+      text-align: justify;
+      border-radius: 30px;
+    }
+
+    /*Dimensoin/Format PC & Mobile*/
+    /* Styles pour les écrans de taille moyenne (tablettes) */
+
+    footer {
+      color: rgb(0, 0, 0);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      position: relative;
+      align-content: center;
+      padding-bottom: 100px;
+    }
+
+    /* Styles pour les écrans de petite taille (mobiles) */
+    @media only screen and (max-width: 687px) {
+      * {
+        font-size: 90%;
+      }
+
+      aside {
+        display: inline;
+        gap: 0;
+        align-items: center;
+      }
+
+
+    }
+
+    @media only screen and (max-width: 1024px) {
+      * {
+        font-size: 90%;
+      }
+      nav {
+        padding-bottom: 0;
+      }
+      .item {
+        color: #ffffff;
+      }
+      menu {
+        display: inline;
+      }
+      #menu-button {
+        display: block;
+        float: right;
+        margin-top: 30px;
+        margin-right: 50px;
+        font-size: 300%;
+      }
+      #menu {
+        display: none;
+      }
+      #menu.open {
+        display: inline;
+        font-size: 200%;
+        background-color: rgba(90, 90, 90, 0.877);
+        color: #ffffff;
+        padding: 20px;
+        line-height: 100px;
+        height: 700px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 250px;
+        position: fixed;
+        z-index: 1000;
+      }
+      select {
+        font-size: 100%;
+        background-color: rgb(101, 179, 121);
+        color: #ffffff;
+        border-radius: 30px;
+        text-align: center;
+      }
+      aside {
+        display: flex;
+        gap: 0;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="https://coursereport-s3-production.global.ssl.fastly.net/rich/rich_files/rich_files/5961/s300/code-logo-square.png"
+        class="Logo" alt="">
+      <button id="menu-button">&boxbox;</button>
+      <menu id="menu">
+        <a href="index.html" class="item">Home&boxbox;</a>
+        <a href="MyConsol connexion.html" class="item">Account&boxbox;</a>
+        <a href="MyConsol office.html" class="item">Novelties&boxbox;</a>
+        <a href="MyConsol learn.html" class="item">Learn&Xopf;</a>
+        <a href="MyConsol interchat.html" class="item">Chat&boxbox;</a>
+        <div id="theme-color">
+          <select id="colorSelect" onchange="changeColors()" style="position: relative;; left:0%;">
+            <option selected hidden>Theme</option>
+            <option value="Blanc">Blanc</option>
+            <option value="gray">Gris</option>
+            <option value="red">Rouge</option>
+            <option value="green">Vert</option>
+            <option value="blue">Bleu</option>
+          </select>
+          <br>
+          <br>
+
+        </div>
+      </menu>
+    </nav>
+  </header>
+</body>
+
+</html>

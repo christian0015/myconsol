@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MyConsol</title>
+  <meta name="myconsol" content="apprendre, learn , programme, programming; code, codage, coding, c, html, css, , javascript, php, python, c, c++,services, contact, entreprise">
+  <link rel="stylesheet" href="reconversion.css">
+  <link rel="icon" href="https://lolcodeclan.netlify.app/image/CODE%20LOGO-W.png" type="image/x-icon">
+  <style>
+    /*===================================================Reset CSS==========================================*/
+    body {
+      font-size: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      width: 100%
+    }
+
+    nav {
+      background-color: #ffffff;
+      padding-bottom: 1px;
+      width: 100%;
+      align-items: flex-end;
+    }
+
+    .Logo {
+      margin-left: 20px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      width: 70px;
+      height: 70px;
+      box-shadow: 0 0 0 #ffffff;
+      border-radius: 20px;
+    }
+
+    menu {
+      float: right;
+      margin-top: 40px;
+
+    }
+
+    .item {
+      color: rgb(4, 44, 46);
+      text-decoration: none;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: bold;
+      margin-right: 90px;
+      font-size: 130%;
+    }
+
+    #menu-button {
+      display: none;
+    }
+
+    select {
+      font-size: 100%;
+      background-color: rgb(101, 179, 121);
+      color: #ffffff;
+      border-radius: 30px;
+      text-align: center;
+    }
+
+    aside {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .login {
+      background-color: rgb(23, 218, 39);
+      color: #ffffff;
+      padding: 20px;
+      font-size: 130%;
+      border-radius: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .sign {
+      background-color: rgb(196, 23, 23);
+      color: #ffffff;
+      padding: 20px;
+      font-size: 130%;
+      border-radius: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    #Connexion {
+      background-color: rgb(3, 33, 61);
+      padding: 20px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      width: 400px;
+      font-size: 100%;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #Inscription {
+      background-color: rgb(3, 33, 61);
+      padding: 20px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      width: 400px;
+      font-size: 100%;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
+
+    }
+
+    #connex {
+      scale: 1.1;
+    }
+
+    #inscript {
+      filter: blur(5px);
+      scale: 0.9;
+    }
+
+    #connex.Connex {
+      filter: blur(5px);
+      scale: 0.9;
+    }
+
+    #inscript.Connex {
+      filter: none;
+      scale: 1.1;
+    }
+
+    #formulaire {
+      font-size: 150%;
+      border-radius: 15px;
+    }
+
+    .oubli {
+      color: rgb(190, 190, 190);
+      font: 1em sans-serif;
+    }
+
+    #change_connexion {
+      font-size: 150%;
+      border-radius: 15px;
+      background-color: rgb(3, 33, 61);
+      color: #fa8484;
+      text-decoration: #661b1b;
+      text-decoration-line: underline;
+    }
+
+    #noChange_connexion {
+      font-size: 150%;
+      border-radius: 15px;
+      background-color: rgb(3, 33, 61);
+      color: #0cb963;
+      text-decoration: #1b6628;
+      text-decoration-line: underline;
+    }
+
+    .autre_connexion {
+      font-size: 100%;
+      margin-top: 30px;
+      color: #661b1b;
+      text-align: center;
+    }
+
+    #autre_connexion {
+      font-size: 150%;
+      color: #000000;
+      padding: 10px;
+      background-color: rgb(255, 255, 255);
+      border-color: #000000;
+      box-shadow: 1px 1px 0px #000000;
+      text-align: center;
+    }
+
+    #img-connex {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+    }
+
+    #img-link {
+      width: 50px;
+      height: 50px;
+      box-shadow: 4px 10px 20px#ffffff;
+      padding: -30%;
+      margin: -20px;
+      margin-right: 5%;
+      padding-bottom: -100%;
+      text-align: justify;
+      border-radius: 30px;
+    }
+
+    /*Dimensoin/Format PC & Mobile*/
+    /* Styles pour les écrans de taille moyenne (tablettes) */
+
+    footer {
+      color: rgb(0, 0, 0);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      position: relative;
+      align-content: center;
+      padding-bottom: 100px;
+    }
+
+    /* Styles pour les écrans de petite taille (mobiles) */
+    @media only screen and (max-width: 687px) {
+      * {
+        font-size: 90%;
+      }
+
+      aside {
+        display: inline;
+        gap: 0;
+        align-items: center;
+      }
+
+      .login {
+        background-color: rgb(23, 218, 39);
+        color: #ffffff;
+        padding: 20px;
+        font-size: 150%;
+        border-radius: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+
+      .sign {
+        background-color: rgb(196, 23, 23);
+        color: #ffffff;
+        padding: 20px;
+        font-size: 150%;
+        border-radius: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      #Connexion {
+        background-color: rgb(3, 33, 61);
+        padding: 20px;
+        margin-left: 10%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 250px;
+        font-size: 130%;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        line-height: 25px;
+      }
+
+      #Inscription {
+        background-color: rgb(3, 33, 61);
+        padding: 20px;
+        margin-left: 10%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 250px;
+        font-size: 130%;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+      }
+      #connex {
+        scale: 1.1;
+      }
+      #inscript {
+        filter: blur(5px);
+        scale: 0.4;
+        display: none;
+      }
+
+      #connex.Connex {
+        filter: blur(5px);
+        scale: 0.4;
+        display: none;
+      }
+
+      #inscript.Connex {
+        filter: none;
+        scale: 1.1;
+        display: block;
+
+      }
+      #img-link {
+        font-size: 90%;
+        box-shadow: 10px 10px 10px#ffffff;
+        padding: -30%;
+        margin: -20px;
+        margin-right: 30px;
+        padding-bottom: -100%;
+      }
+    }
+
+    @media only screen and (max-width: 1024px) {
+      * {
+        font-size: 90%;
+      }
+      nav {
+        padding-bottom: 0;
+      }
+      .item {
+        color: #ffffff;
+      }
+      menu {
+        display: inline;
+      }
+      #menu-button {
+        display: block;
+        float: right;
+        margin-top: 30px;
+        margin-right: 50px;
+        font-size: 300%;
+      }
+      #menu {
+        display: none;
+      }
+      #menu.open {
+        display: inline;
+        font-size: 200%;
+        background-color: rgba(90, 90, 90, 0.877);
+        color: #ffffff;
+        padding: 20px;
+        line-height: 100px;
+        height: 700px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 250px;
+        position: fixed;
+      }
+      select {
+        font-size: 100%;
+        background-color: rgb(101, 179, 121);
+        color: #ffffff;
+        border-radius: 30px;
+        text-align: center;
+      }
+      aside {
+        display: flex;
+        gap: 0;
+        align-items: center;
+      }
+
+      .login {
+        background-color: rgb(23, 218, 39);
+        color: #ffffff;
+        padding: 20px;
+        font-size: 150%;
+        border-radius: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+
+      .sign {
+        background-color: rgb(196, 23, 23);
+        color: #ffffff;
+        padding: 20px;
+        font-size: 150%;
+        border-radius: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      #Connexion {
+        background-color: rgb(3, 33, 61);
+        padding: 20px;
+        margin-left: 10%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 250px;
+        font-size: 130%;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        line-height: 25px;
+      }
+
+      #Inscription {
+        background-color: rgb(3, 33, 61);
+        padding: 20px;
+        margin-left: 10%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 250px;
+        font-size: 130%;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+      }
+      #connex {
+        scale: 1.1;
+      }
+      #inscript {
+        filter: blur(5px);
+        scale: 0.4;
+      }
+
+      #connex.Connex {
+        filter: blur(5px);
+        scale: 0.4;
+      }
+
+      #inscript.Connex {
+        filter: none;
+        scale: 1.1;
+      }
+    }
+
+    body {
+      background-color: gray;
+      font-size: 350%;
+    }
+
+    h2 {
+      margin-top: -15px;
+    }
+
+    #recherche {
+      font-size: 80%;
+      top: -60px;
+      max-width: 70%;
+    }
+
+    .user-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .user-label {
+      background-color: white;
+      padding: 30px;
+      margin-left: 0;
+      border-radius: 10%;
+      max-width: 35%;
+      height: 3vh;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .user-input {
+      margin-right: 10px;
+      font-size: 70%;
+      width: 90%;
+      height: 5vh;
+      text-align: center;
+      color: rgb(50, 150, 150);
+    }
+
+    #add-user-button {
+      position: fixed;
+      right: 20px;
+      top: 10%;
+      font-size: 75%;
+      border-radius: 20%;
+      background: none;
+      color: orange;
+    }
+
+    #user-input[type="text"]::placeholder {
+      content: "Écrire un message";
+      color: #999;
+      font-style: italic;
+    }
+
+
+    #submit-button {
+      position: fixed;
+      font-size: 100%;
+      right: 20px;
+      top: 300px;
+    }
+
+    @keyframes glowing {
+      0% {
+        border-color: transparent;
+      }
+      50% {
+        border-color: #ff8c00;
+        box-shadow: 10px 10px 15px #ff8c00;
+      }
+      100% {
+        border-color: transparent;
+      }
+    }
+
+    .glow-border {
+      animation: glowing 2s infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="https://coursereport-s3-production.global.ssl.fastly.net/rich/rich_files/rich_files/5961/s300/code-logo-square.png"
+        class="Logo" alt="">
+      <button id="menu-button">&boxbox;</button>
+      <menu id="menu">
+        <a href="index.html" class="item">Home&boxbox;</a>
+        <a href="MyConsol connexion.html" class="item">Account&boxbox;</a>
+        <a href="MyConsol learn.html" class="item">Novelties&boxbox;</a>
+        <a href="MyConsol office.html" class="item">Learn&Xopf;</a>
+        <a href="MyConsol interchat.html" class="item">Safe&boxbox;</a>
+        <div id="theme-color">
+          <select id="colorSelect" onchange="changeColors()" style="position: relative;; left:0%;">
+            <option selected hidden>Theme</option>
+            <option value="Blanc">Blanc</option>
+            <option value="gray">Gris</option>
+            <option value="red">Rouge</option>
+            <option value="green">Vert</option>
+            <option value="blue">Bleu</option>
+          </select>
+          <br>
+          <br>
+
+        </div>
+      </menu>
+    </nav>
+  </header>
+  <div style="background-color: rgb(153, 56, 45); color: white; padding: 1%; margin: -8px; position: fixed; width: 100%; height:30%">
+    <a href="MyConsol learn.html" h style="color: rgb(50, 150, 150);">retour</a>
+    <h2>
+      <div style="font-size: 130%; font-weight: bold;">Discussions</div>
+    </h2>
+    <input id="recherche" type="search" placeholder="rechercher">
+    <button id="add-user-button" onclick="addUser()">Ajouter un utilisateur</button>
+    <hr>
+  </div>
+  <div style="padding: 170px; color: gray;">Conversation</div>
+  <div id="users-container">
+    <div class="user-container">
+      <label class="user-label" for="nomUtilisateur">Encadreur Stocklin python</label>
+      <div id="nomUtilisateur">
+        <input class="user-input" type="text" id="input-nomUtilisateur" placeholder="ecrire un message" />
+      </div>
+    </div>
+  </div>
+
+  <button id="submit-button" class="glow-border" onclick="addUser()">Envoyer</button>
+
+  <script>
+    function addUser() {
+      var userContainer = document.createElement('div');
+      userContainer.className = 'user-container';
+
+      var userLabel = document.createElement('label');
+      userLabel.className = 'user-label';
+      userLabel.setAttribute('for', 'nomUtilisateur');
+      userLabel.innerText = 'Nouvel Utilisateur:';
+
+      var userDiv = document.createElement('div');
+      userDiv.id = 'nomUtilisateur';
+
+      var userInput = document.createElement('input');
+      userInput.className = 'user-input';
+      userInput.type = 'text';
+      userInput.id = 'input-nomUtilisateur';
+
+      userDiv.appendChild(userInput);
+      userContainer.appendChild(userLabel);
+      userContainer.appendChild(userDiv);
+
+      var usersContainer = document.getElementById('users-container');
+      usersContainer.appendChild(userContainer);
+    }
+  </script>
+
+</body>
+<footer style="text-align:center;background-color: rgb(255, 255, 255);">
+  <strong><br><br><br>&copy;copyrighst2023_myconsol</strong><br>Tous droits reservés.<br>
+
+  <a href="tel:+212634699940">Call</a> <a href="mailto:christiantukundastocklin@gmail.com">Mail</a><br><br>
+  <div>
+    <a href="facebook.com"><img src="https://www.generindo.com/images/Logo_Social/facebook.png" alt="" id="img-link"></a>-<a
+      href="youtube.com"><img src="https://www.sarei.de/images/social/youtube_bg_white.png" alt="" id="img-link"></a>-<a href="instagam.com"><img
+        src="https://th.bing.com/th/id/R.41e2672e66f7aba0f967aa362bf4701c?rik=wABWDxFjJS8ZNg&pid=ImgRaw&r=0" alt="" id="img-link"></a>
+    <a href=""><img src="https://bitemycoin.com/wp-content/uploads/2018/06/GitHub-Logo.png" alt="" id="img-link"></a>
+    <br>
+  </div>
+  <br><br><br> myconsol- -Tel_071308-8840<br>Casablanca, Maroc
+
+</footer>

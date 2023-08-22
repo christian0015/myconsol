@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MyConsol</title>
+  <meta name="myconsol"
+    content="apprendre, learn , programme, programming; code, codage, coding, c, html, css, , javascript, php, python, c, c++,services, contact, entreprise">
+  <link rel="stylesheet" href="reconversion.css">
+  <link rel="icon" href="https://lolcodeclan.netlify.app/image/CODE%20LOGO-W.png" type="image/x-icon">
+  <style>
+    /*===================================================Reset CSS==========================================*/
+    body {
+      font-size: 100%;
+      background-color: #ffff;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      width: 100%
+    }
+
+    nav {
+      background-color: #ffffff;
+      padding-bottom: 1px;
+      width: 100%;
+      align-items: flex-end;
+    }
+
+    .Logo {
+      margin-left: 20px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      width: 70px;
+      height: 70px;
+      box-shadow: 0 0 0 #ffffff;
+      border-radius: 20px;
+    }
+
+    menu {
+      float: right;
+      margin-top: 40px;
+
+    }
+
+    .item {
+      color: rgb(4, 44, 46);
+      text-decoration: none;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: bold;
+      margin-right: 90px;
+      font-size: 130%;
+    }
+
+    #menu-button {
+      display: none;
+    }
+
+    select {
+      font-size: 100%;
+      background-color: rgb(101, 179, 121);
+      color: #ffffff;
+      border-radius: 30px;
+      text-align: center;
+    }
+
+    aside {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      text-align: start;
+      justify-content: center;
+    }
+
+    /*====================================Reste de la page=====================================================*/
+    #contenu {
+      padding: 50px;
+    }
+
+    #profil {
+      border-radius: 100px;
+      width: 300px;
+      height: 200px;
+    }
+
+    #change-profil-button {
+      width: 200px;
+      background: linear-gradient(#0e274d, #7797c7, #e4b51d);
+      color: #000000;
+      margin-left: 40px;
+    }
+
+    #change-profil {
+      width: 400px;
+      background: linear-gradient(#042453, #052e6b, #75611d);
+      color: #ffffff;
+      padding: 20px;
+      line-height: 50px;
+      left: -900px;
+      border-top-right-radius: 700px;
+      border-bottom-right-radius: 400px;
+      position: fixed;
+    }
+
+    #change-profil.open {
+      left: 0;
+
+    }
+
+    #pro {
+      width: 250px;
+      font-size: 130%;
+    }
+
+    #proB {
+      width: 150px;
+      font-size: 130%;
+      margin-left: 50px;
+      background: linear-gradient(#0e274d, #7797c7, #e4b51d);
+      color: #c3fcb8;
+    }
+
+    #description {
+      font-size: 150%;
+      text-align: start;
+    }
+
+    #bare {
+      background-color: rgb(255, 255, 255);
+      color: rgb(44, 32, 0);
+      margin-left: 10px;
+      font-size: 160%;
+    }
+
+    a {
+      color: rgb(0, 148, 216);
+      text-decoration: rgb(126, 86, 0);
+      text-align: justify;
+    }
+    
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+
+    }
+
+    .sectionZ {
+      display: flex;
+      gap: 50px;
+      padding: 50px;
+      width: 200px;
+      box-shadow: 10px 10px 20px #0e274d;
+      border-radius: 50px;
+
+      width: 20%;
+      height: 10%;
+    }
+    .sectionZ>span>a{
+      color: #464646;
+      font-weight: 100;
+
+    }
+
+    .sectionZ{
+      color: #dab71d;
+      font-weight: bold;
+
+    }
+
+    #img-link {
+      width: 50px;
+      height: 50px;
+      box-shadow: 4px 10px 20px#ffffff;
+      padding: -30%;
+      margin: -20px;
+      margin-right: 5%;
+      padding-bottom: -100%;
+      text-align: justify;
+      border-radius: 30px;
+    }
+
+    /*Dimensoin/Format PC & Mobile*/
+    /* Styles pour les écrans de taille moyenne (tablettes) */
+
+    footer {
+      color: rgb(0, 0, 0);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      position: relative;
+      align-content: center;
+      padding-bottom: 100px;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      * {
+        font-size: 120%;
+      }
+
+      nav {
+        padding-bottom: 0;
+      }
+
+      .item {
+        color: #ffffff;
+      }
+
+      menu {
+        display: inline;
+      }
+
+      #menu-button {
+        display: block;
+        float: right;
+        margin-top: 30px;
+        margin-right: 50px;
+        font-size: 300%;
+      }
+
+      #menu {
+        display: none;
+      }
+
+      #menu.open {
+        display: inline;
+        font-size: 200%;
+        background-color: rgba(90, 90, 90, 0.877);
+        color: #ffffff;
+        padding: 20px;
+        line-height: 100px;
+        height: 700px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 250px;
+        position: fixed;
+        z-index: 1000;
+      }
+
+      select {
+        font-size: 100%;
+        background-color: rgb(101, 179, 121);
+        color: #ffffff;
+        border-radius: 30px;
+        text-align: center;
+      }
+
+      aside {
+        display: flex;
+        gap: 0;
+        align-items: center;
+      }
+    }
+
+
+    .sectionZ {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      padding: 50px;
+      width: 150px;
+      box-shadow: 10px 10px 20px #234981;
+      border-radius: 50px;
+      display: hidden;
+      height: 10%;
+      font-size: 200%;
+    }
+
+    /* Styles pour les écrans de petite taille (mobiles) */
+    @media only screen and (max-width: 687px) {
+      * {
+        font-size: 90%;
+      }
+
+      aside {
+        display: inline;
+        gap: 0;
+        align-items: center;
+      }
+
+      /*====================================Reste de la page=====================================================*/
+      #contenu {
+        padding: 50px;
+        font-size: 120%;
+      }
+
+      #profil {
+        border-radius: 100px;
+        width: 300px;
+        height: 200px;
+      }
+
+      #change-profil-button {
+        width: 200px;
+        background: linear-gradient(#0e274d, #7797c7, #e4b51d);
+        color: #000000;
+        margin-left: 40px;
+      }
+
+      #change-profil {
+        width: 340px;
+        background: linear-gradient(#042453, #052e6b, #75611d);
+        color: #ffffff;
+        padding: 20px;
+        line-height: 60px;
+        left: -900px;
+        border-top-right-radius: 700px;
+        border-bottom-right-radius: 400px;
+        position: fixed;
+      }
+
+      #change-profil.open {
+        left: 0;
+
+      }
+
+      #pro {
+        width: 200px;
+        font-size: 150%;
+      }
+
+      #proB {
+        width: 150px;
+        font-size: 130%;
+        margin-left: 50px;
+        background: linear-gradient(#0e274d, #7797c7, #e4b51d);
+        color: #c3fcb8;
+      }
+
+      #description {
+        font-size: 150%;
+        text-align: start;
+      }
+
+      #bare {
+        color: rgb(44, 32, 0);
+        margin-left: 5px;
+        font-size: 150%;
+      }
+
+      /*=========================================================================*/
+      /* Styles pour les écrans de taille moyenne (tablettes) */
+
+      a {
+        color: rgb(0, 148, 216);
+        text-decoration: rgb(126, 86, 0);
+        text-align: justify;
+      }
+
+
+    }
+
+
+
+    #submit {
+      background-color: rgb(255, 255, 255);
+      color: rgb(10, 68, 107);
+      font-weight: 900;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img
+        src="https://coursereport-s3-production.global.ssl.fastly.net/rich/rich_files/rich_files/5961/s300/code-logo-square.png"
+        class="Logo" alt="">
+      <button id="menu-button">&boxbox;</button>
+      <menu id="menu">
+        <a href="index.html" class="item">Home&boxbox;</a>
+        <a href="MyConsol connexion.html" class="item">Account&boxbox;</a>
+        <a href="MyConsol office.html" class="item">Novelties&boxbox;</a>
+        <a href="MyConsol learn.html" class="item">Learn&Xopf;</a>
+        <a href="MyConsol interchat.html" class="item">Chat&boxbox;</a>
+        <div id="theme-color">
+          <select id="colorSelect" onchange="changeColors()" style="position: relative;; left:0%;">
+            <option selected hidden>Theme</option>
+            <option value="Blanc">Blanc</option>
+            <option value="gray">Gris</option>
+            <option value="red">Rouge</option>
+            <option value="green">Vert</option>
+            <option value="blue">Bleu</option>
+          </select>
+        </div>
+      </menu>
+    </nav>
+  </header>
+  <div id="change-profil">
+    <h2>Profil</h2>
+    <form action="" method="get"></form>
+    </ul>
+    <li>Photo<input type="file" name="profil" id="pro" placeholder="Choisir une image"><br></li>
+    <li><input type="text" name="nom" id="pro" placeholder="Nom"></li>
+    <li><input type="text" name="prenom" id="pro" placeholder="Prenom"></li>
+    <li><input type="email" name="mail" id="pro" placeholder="Mail"><br></li>
+    <li><input type="text" name="password" id="pro" placeholder="utilisateur"></li> <input type="hidden" name="">
+    <li><input type="password" name="pass" id="pro" placeholder="password"></li>
+    </ul>
+    <input type="submit" value="Valider" id="proB">
+    </form>
+  </div>
+  <div id="contenu">
+    <aside>
+      <span>
+        <img id="profil" src="profil.png">
+        <span>
+          <p id="nom">Bonjour Mr/Mme/Mdll Xxxx Yyyyy</p>
+        </span>
+        <button id="change-profil-button">Modifier</button>
+      </span>
+      <span>
+        <span id="description">
+          Bienvenu sur votre compte myconsol, nous vous contacterons via ce mail:xxxxyyyy@gmail.com. A present vous
+          pouvez suivre nos
+          formations d'initiation au code et ainsi lancer votre carriere. NB:Dans le cadre d'une juste evolution, nous
+          vous
+          disposerons d'un service d'entretient qui vous permettrons de garder les contacte avec quelques un de nos
+          corps
+          enseignants.
+          <a>Gerer votre compte dans le parametre menu.</a> Pour suivre votre formation appuiyer ci-haut sur l'onglet
+          Office.
+        </span>
+      </span>
+    </aside>
+
+    <br>
+    <br> Nous utilesons visual studio code comme logiciel éditeur
+    <a href="https://visual studio code">Télécharger visual studio code</a>
+    <br>
+
+    <section>
+      <span class="sectionZ">
+        <span>C</span>
+        <span> <a href="">Affichage & Saisie <br> Calcule
+            <br> Pointer
+            <br> Liste chainée <br> Structure
+            <br> Stockage
+          </a></span>
+        <span class="sectionZ"></span>
+      </span>
+      <span class="sectionZ">
+        <span>Html</span>
+        <span><a href=""> Initiation <br> Affichage
+            <br> developpement des balises <br> style
+            <span class="sectionZ"></span>
+          </a></span>
+      </span>
+      <span class="sectionZ">
+        <span>CSS</span>
+        <span><a href=""> Attributs <br>propriété </a></span>
+        <span class="sectionZ"></span>
+      </span>
+
+      <span class="sectionZ">
+        <span>javascript</span>
+        <span><a href="">Declaration de variable & constante<br> Obtention par id, class et nom<br> Calcul
+            <br> Automatisation
+            <br> Donnée <span class="sectionZ"></span>
+          </a></span>
+      </span>
+      <span class="sectionZ">
+        <span>PHP</span>
+        <span><a href="">
+            Connexion aux bases de données WampServer<br> Connexion aux bases de données<br> Message d'erreur<br>
+          </a></span>
+        <span class="sectionZ"></span>
+      </span>
+      <span class="sectionZ">
+        Python <span><a href="">Interface Graphique</a></span>
+        <span class="sectionZ"></span>
+      </span>
+      <div class="sectionZ">
+        C++ <span><a href="">Repondeur automatique</a></span>
+        <span class="sectionZ"></span>
+        </span>
+    </section>
+
+    <br><br><br><br>
+
+    <div id="bare">
+      Bienvenue sur notre site d'enprentissage de codage base sur python.
+      <br> Il est tout d'abord essentiel de parler a un peu plus d'un mot a quoi consiste notre site.
+      <br> Eh ben, ce site est specialement fait pour tout ceux qui partage avec nous le besion de gamer, de styliser et
+      de personnalise des jeux video.
+      <br> Il est toute fois bien a signaler que pour toute activite libre comme le tele-enprentiisage, une discpline de
+      qualite s'exige a tout niveau.
+      <br> Nous disposerons de quelques videos et commentaires pour un peu plus mieux expliquer l'outil informatique, a
+      savoir
+      Python.
+      <br> Notre programme de leçon s'ennonce comme suite:
+      <ul>
+        Initiation a l'outil python
+        <li>Installation</li>
+        <li>Main (Saisie, Affichage, Sauvegarde Memoire, Calcul(table de multiplication, Algorithme,trigonometrie,
+          Algebre))</li>
+        Creation de l'interface graphique pyton
+        <li>Affichage sur une interface graphique</li>
+        <li>Mutli-interface</li>
+        <li>Bouton et lien inter-interface</li>
+        <li>Image, Audio et Video</li>
+        Premiere simmulation jeux d'esquive
+        <li>Creation d'espace de travail</li>
+        <li>Creation joueur</li>
+        <li>Creation Ennemi</li>
+        <li>Forme des joueurs et ennemis</li>
+        Design de l'interface
+        <li>Design par image</li>
+        <li>Design 3D</li>
+        <li>Jeux de course</li>
+
+      </ul>
+    </div>
+    <center><a href="MyConsol office.html"><button style="font-size:30px;text-align: center;">Commencer</button></a>
+    </center>
+
+    <br>
+    <iframe width="300" height="215" src="https://www.youtube.com/embed/H9fg7GFagF4" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+    <br><br>
+  </div>
+
+  <footer style="text-align:center;background-color: rgb(255, 255, 255);">
+    <strong><br><br><br>&copy;copyrighst2023_myconsol</strong><br>Tous droits reservés.<br>
+
+    <a href="tel:+212634699940">Call</a> <a href="mailto:christiantukundastocklin@gmail.com">Mail</a><br><br>
+    <div>
+      <a href="facebook.com"><img src="logofacebook2.png" alt=""
+          id="img-link"></a>-<a href="youtube.com"><img src="https://www.sarei.de/images/social/youtube_bg_white.png"
+          alt="" id="img-link"></a>-<a href="instagam.com"><img
+          src="https://th.bing.com/th/id/R.41e2672e66f7aba0f967aa362bf4701c?rik=wABWDxFjJS8ZNg&pid=ImgRaw&r=0" alt=""
+          id="img-link"></a>
+      <a href=""><img src="https://bitemycoin.com/wp-content/uploads/2018/06/GitHub-Logo.png" alt="" id="img-link"></a>
+      <br>
+    </div>
+    <br><br><br> myconsol- -Tel_071308-8840<br>Casablanca, Maroc
+  </footer>
+
+  <script>
+    // Récupération des éléments HTML
+    const menuButton = document.getElementById('menu-button');
+    const menu = document.getElementById('menu');
+
+    // Fonction pour ouvrir le menu
+    function openMenu() {
+      menu.classList.add('open');
+      document.addEventListener('click', closeMenu);
+    }
+
+    // Fonction pour fermer le menu
+    function closeMenu(event) {
+      if (!menu.contains(event.target) && event.target !== menuButton) {
+        menu.classList.remove('open');
+        document.removeEventListener('click', closeMenu);
+      }
+    }
+
+    // Ajout d'un écouteur d'événement pour ouvrir le menu au clic
+    menuButton.addEventListener('click', openMenu);
+
+    //*********************************Change profile**********************
+
+    // Récupération des éléments HTML
+    const profilButton = document.getElementById('change-profil-button');
+    const profil = document.getElementById('change-profil');
+
+    // Fonction pour ouvrir le menu
+    function openProfil() {
+      profil.classList.add('open');
+      document.addEventListener('click', closeProfil);
+    }
+
+    // Fonction pour fermer le menu
+    function closeProfil(event) {
+      if (!profil.contains(event.target) && event.target !== profilButton) {
+        profil.classList.remove('open');
+        document.removeEventListener('click', closeProfil);
+      }
+    }
+
+    // Ajout d'un écouteur d'événement pour ouvrir le menu au clic
+    profilButton.addEventListener('click', openProfil);
+  </script>
+
+</html>
