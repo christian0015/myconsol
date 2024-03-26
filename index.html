@@ -83,6 +83,25 @@
 
     </script>
 
+    <style>
+        /* Styles de base pour les barres de menu */
+.menu-bar {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.menu-bar:nth-child(2) {
+    width: 20px;
+}
+
+.menu-bar:nth-child(3) {
+    width: 15px;
+}
+    </style>
+
 </head>
 
 <body>
@@ -90,7 +109,11 @@
         <nav>
             <img src="https://coursereport-s3-production.global.ssl.fastly.net/rich/rich_files/rich_files/5961/s300/code-logo-square.png"
                 class="Logo" alt="">
-            <button id="menu-button">&boxbox;</button>
+            <button id="menu-button">
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+            </button>
             <menu id="menu">
                 <a href="index.html" class="item">Home&boxbox;</a>
                 <a href="MyConsol connexion.html" class="item">Account&boxbox;</a>
