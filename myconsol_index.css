@@ -106,6 +106,7 @@ body {
     font-size: 50%;
     margin-top: 20px;
     width: 240px;
+      border-raduis:10px;
   }
 
   #font-quatre {
